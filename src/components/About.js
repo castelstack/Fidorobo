@@ -7,7 +7,7 @@ const AboutComponent = () => {
       <div className='wrapper px-4 grid grid-cols-2 max-md:grid-cols-1  gap-4 items-center justify-between my-auto'>
         <div className='flex flex-col text-gray-900 items-start gap-6'>
           <h2 className='header-text'>About Field Robo</h2>
-          <p className='text-xl max-md:text-base  max-md:w-[85%] text-gray-800'>
+          <p className='text-xl max-md:text-base  max-md:w-[95%] text-gray-800'>
             All-In-One Platform. Total Visibility. Our field service management
             software is feature rich and supports a wide range of businesses who
             perform service jobs, project and maintenance management.

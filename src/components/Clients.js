@@ -12,7 +12,7 @@ const ClientComponent = () => {
         />
         <div className='flex flex-col  text-black items-start gap-6'>
           <h2 className='header-text capitalize'>client portal</h2>
-          <p className='text-xl max-md:text-base max-md:w-[85%] font-normal text-gray-800'>
+          <p className='text-xl max-md:text-base max-md:w-[95%] font-normal text-gray-800'>
             Enhance customer experience and reduce your operational admin, give
             your customer’s a 24/7 self serve portal & a real time view on their
             jobs.
