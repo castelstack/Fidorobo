@@ -15,8 +15,7 @@ const Footer = () => {
         </div>
         {/* access */}
         <div className='flex flex-col'>
-          <h1 className='text-base text-black font-bold mb-2'>Quick access</h1>
-          <a className='capitalize mb-1 text-sm font-light text-black'>Whitepaper</a>
+          <h1 className='text-base text-black font-bold mb-2'>Products</h1>
           <Link href='/privacy-and-policy' className='capitalize mb-1 text-sm font-light text-black'>
           about us
           </Link>
