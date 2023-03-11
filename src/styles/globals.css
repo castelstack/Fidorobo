@@ -1,3 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-[10px] px-[50px] bg-white text-tag-brand font-semibold rounded-md shadow-md hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-tag-brand focus:ring-opacity-75 text-base;
+  }
+  .btn-sec {
+    @apply py-[10px] px-[50px] text-white bg-tag-brand font-semibold rounded-md shadow-md hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-tag-brand focus:ring-opacity-75 text-base;
+  }
+
+  .header-text {
+    @apply text-4xl max-md:text-xl font-bold text-black
+  }
+  .banner-text {
+    @apply !leading-[4rem] text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-black
+  }
+  p {
+    @apply text-base max-md:text-sm font-normal 
+  }
+}
+
+
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -77,12 +102,15 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #fff;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -93,6 +121,29 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#icon {
+  height: 20px;
+  width: 20px;
+}
+
+.dropdown-right .dropdown-content {
+  left: -500% !important;
+}
+
+.hero{
+  background-image: url('/bg-hero.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 100%;
 }
 
 a {
