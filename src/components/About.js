@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutComponent = () => {
   return (
-    <section className='bg-tag-brandLight  md:h-[90vh] h-full py-32 grid place-content-center'>
+    <section className='bg-tag-brandLight h-[90vh] py-32 grid place-content-center'>
       <div className='wrapper px-4 grid grid-cols-2 max-md:grid-cols-1  gap-4 items-center justify-between my-auto'>
         <div className='flex flex-col text-gray-900 items-start gap-6'>
           <h2 className='header-text'>About Field Robo</h2>

@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 const ClientComponent = () => {
   return (
-    <section className='h-[90vh] grid place-content-center'>
+    <section className='h-[90vh]  grid place-content-center'>
       <div className='wrapper px-4 grid grid-cols-2 max-md:grid-cols-1 max-md:justify-items-center gap-4 items-center justify-between'>
         <Image
           src={clientImg}
           alt='client Field Robo'
-          className='max-w-[550px] max-md:max-w-[350px]  max-md:mt-12  justify-self-center'
+          className='max-w-[550px] max-md:max-w-[350px]  max-md:mt-12  justify-self-center max-md:order-last'
         />
         <div className='flex flex-col  text-black items-start gap-6'>
           <h2 className='header-text capitalize'>client portal</h2>

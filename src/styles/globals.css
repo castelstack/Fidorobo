@@ -11,7 +11,7 @@
   }
 
   .header-text {
-    @apply text-4xl max-md:text-xl font-bold text-black
+    @apply text-4xl max-md:text-2xl font-bold text-black
   }
   .banner-text {
     @apply !leading-[4rem] text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-black
