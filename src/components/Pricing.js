@@ -1,10 +1,10 @@
 const PricingComponent = () => {
   return (
     <section id='pricing' className=' bg-tag-brandLight py-32'>
-      <main className='wrapper px-2'>
-        <div className='flex flex-col items-center text-black gap-4'>
-          <h2 className='header-text text-center'>Field Robo pricing</h2>
-          <p className='text-base text-center max-md:w-[85%] w-[50%]'>
+      <main className='wrapper px-4'>
+        <div className='flex flex-col  text-black gap-4'>
+          <h2 className='header-text '>Field Robo pricing</h2>
+          <p className='text-base  max-md:w-[85%] w-[50%]'>
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took a galley
           </p>

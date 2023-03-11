@@ -4,7 +4,7 @@ import Image from 'next/image';
 const DownloadComponent = () => {
   return (
     <section>
-      <main className='wrapper px-2 h-[90vh] grid place-content-center'>
+      <main className='wrapper px-4 h-[90vh] grid place-content-center'>
         <div className='flex flex-col items-center text-black gap-4 mb-12'>
           <h2 className='header-text text-center'>
             Get started with our mobile app

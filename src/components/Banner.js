@@ -7,12 +7,12 @@ const BannerComponent = () => {
     <section className='bg-tag-brandLight'>
 
     <main className='hero md:h-[90vh] h-full  grid place-content-center'>
-      <div className='wrapper px-3 grid grid-cols-2 max-md:grid-cols-1 max-md:justify-items-center gap-4 items-center justify-between pt-20 pb-40'>
-        <div className='flex flex-col max-md:items-center text-black items-start gap-6'>
-          <h2 className='banner-text text-5xl max-lg:text-4xl max-md:text-4xl max-md:text-center text-white'>
+      <div className='wrapper px-4 grid grid-cols-2 max-md:grid-cols-1 max-md:justify-items-center gap-4 items-center justify-between pt-20 pb-40'>
+        <div className='flex flex-col  text-black items-start gap-6'>
+          <h2 className='banner-text text-5xl max-lg:text-4xl max-md:text-4xl  text-white'>
             Explore your world with field robo
           </h2>
-          <p className='text-base max-md:text-center text-white max-md:w-[95%]'>
+          <p className='text-base  text-white max-md:w-[95%]'>
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book.

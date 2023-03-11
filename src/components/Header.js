@@ -7,7 +7,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <header className='bg-tag-brand relative'>
-      <div className='py-[20px] wrapper px-3 flex items-center justify-between'>
+      <div className='py-[20px] wrapper px-4 flex items-center justify-between'>
         <Logo />
 
         <nav className='flex gap-[50px] items-center max-md:hidden'>
