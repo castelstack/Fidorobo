@@ -14,7 +14,7 @@
     @apply text-4xl max-md:text-2xl font-bold text-black
   }
   .banner-text {
-    @apply !leading-[4rem] text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-black
+    @apply !leading-[2.8rem] text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-black
   }
   p {
     @apply text-base max-md:text-sm font-normal 
