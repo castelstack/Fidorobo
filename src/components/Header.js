@@ -40,7 +40,7 @@ const Header = () => {
           <a href='#pricing'  className='text-white m-1 py-2 text-base'>
             Pricing
             </a>
-          <button className='btn-primary '>Sign up</button>
+          <button className='btn-primary'>Sign up</button>
         </nav>
 
         <button

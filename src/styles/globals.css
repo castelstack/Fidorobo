@@ -4,7 +4,7 @@
 
 @layer components {
   .btn-primary {
-    @apply py-[10px] px-[50px] bg-white text-tag-brand font-semibold rounded-md shadow-md hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-tag-brand focus:ring-opacity-75 text-base;
+    @apply py-[10px] px-[50px] bg-white text-tag-brand font-semibold rounded-md shadow-md  focus:outline-none focus:ring-2 focus:ring-tag-brand focus:ring-opacity-75 text-base;
   }
   .btn-sec {
     @apply py-[10px] px-[50px] text-white bg-tag-brand font-semibold rounded-md shadow-md hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-tag-brand focus:ring-opacity-75 text-base;
