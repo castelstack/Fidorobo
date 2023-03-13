@@ -1,38 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+### Field Robo Landing Page
+## Quick Start
 
-First, run the development server:
+Get code & install. Then `dev` or `build`
 
-```bash
+* [Get code & install](#get-code--install)
+* [Builds](#builds)
+* [Linting and formatting](#linting-and-formatting)
+
+### Get code & install
+
+#### Get the repo
+
+* [Create new repo](https://castelstackk@bitbucket.org/SmitivAdmin/fr-landing.git) with this template
+* &hellip; or clone this repo on Bitbucket
+
+#### Install
+
+`cd` to project's dir and run `npm install`
+
+### Builds
+
+Build are handled by Next.js CLI &mdash; [Info](https://nextjs.org/docs/api-reference/cli)
+
+#### Hot-reloads for development
+
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Builds and minifies for production
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+npm run build
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#### Exports build for static hosts
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+npm run export
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Linting & Formatting
 
-## Learn More
+#### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Format with prettier
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run format
+```
 
-## Deploy on Vercel
+## Docs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Docs are coming soon
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Browser Support
+
+We try to make sure Dashboard works well in the latest versions of all major browsers
+
+## Reporting Issues
+
+Fieldrobo's free items are limited to community support on GitHub.
+
+The issue list is reserved exclusively for bug reports and feature requests. That means we do not accept usage questions. If you open an issue that does not conform to the requirements, it will be closed.
+
+1. Make sure that you are using the latest version of the Dashboard. Issues for outdated versions are irrelevant
+2. Provide steps to reproduce
+3. Provide an expected behavior
+4. Describe what is actually happening
+5. Platform, Browser & version as some issues may be browser specific
+
+## Licensing
+
+- Copyright &copy; 2019-2022 fieldrobo.io (https://fieldrobo.io)
