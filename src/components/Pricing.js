@@ -1,10 +1,17 @@
+import { currentUser } from '@/store';
+import { useAtomValue } from 'jotai';
+import Link from 'next/link';
+
 const PricingComponent = () => {
+  const user = useAtomValue(currentUser);
+
+  console.log(user, 'user');
   return (
     <section id='pricing' className=' bg-tag-brandLight py-32'>
       <main className='wrapper px-4'>
         <div className='flex flex-col  text-black gap-4'>
           <h2 className='header-text '>Field Robo pricing</h2>
-          <p className='text-base  max-md:w-[95%] w-[50%]'>
+          <p className='text-[18px] max-md:text-base  max-md:w-[95%] w-[50%]'>
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took a galley
           </p>
@@ -19,16 +26,16 @@ const PricingComponent = () => {
                     item.status
                       ? 'bg-white !text-black'
                       : 'bg-tag-brand !text-white'
-                  }`}
+                  } w-full flex flex-col`}
                 >
                   <span className='text-sm'>{item.title}</span>
 
-                  <h5 className=' text-xl font-bold mt-4'>{item.price}</h5>
-                  {item.setupfee ? (
+                  <h5 className=' text-xl font-bold my-4'>{item.price}</h5>
+                  {/* {item.setupfee ? (
                     <p className='text-sm text-tag-brand'>{item.setupfee}</p>
                   ) : (
                     <p className='text-sm text-white py-2'></p>
-                  )}
+                  )} */}
 
                   <p className='mb-6 mt-2 !text-sm'>
                     It offers a reliable and cost-effective hosting solution
@@ -57,11 +64,38 @@ const PricingComponent = () => {
                     ))}
                   </div>
                   {item.status ? (
-                    <button className='btn-sec mt-auto w-full'>Choose</button>
+                    <>
+                      {!user ? (
+                        <Link href='/signup' className='btn-sec mt-auto w-full'>
+                          Choose
+                        </Link>
+                      ) : (
+                        <a
+                          href={item.route}
+                          className='btn-sec mt-auto !w-full '
+                        >
+                          Choose
+                        </a>
+                      )}
+                    </>
                   ) : (
-                    <button className='btn-primary mt-auto w-full'>
-                      Choose
-                    </button>
+                    <>
+                      {!user ? (
+                        <Link
+                          href='/signup'
+                          className='btn-primary mt-auto w-full'
+                        >
+                          Choose
+                        </Link>
+                      ) : (
+                        <a
+                          href={item.route}
+                          className='btn-primary mt-auto !w-full'
+                        >
+                          Choose
+                        </a>
+                      )}
+                    </>
                   )}
                 </div>
               ) : (
@@ -75,19 +109,19 @@ const PricingComponent = () => {
                 >
                   <span className='text-sm text-white'>{item.title}</span>
 
-                  <h5 className=' text-xl font-bold mt-4'>{item.price}</h5>
-                  {item.setupfee ? (
+                  <h5 className=' text-xl font-bold my-4'>{item.price}</h5>
+                  {/* {item.setupfee ? (
                     <p className='text-sm text-white'>{item.setupfee}</p>
                   ) : (
                     <p className='text-sm text-white py-2'></p>
-                  )}
+                  )} */}
 
                   <p className='mb-6 mt-2 !text-sm'>
                     It offers a reliable and cost-effective hosting solution
                     with all the essentials you need to get started.
                   </p>
 
-                  <div className='flex flex-col gap-2 my-8 '>
+                  <div className='flex flex-col gap-2 my-8 w-full'>
                     {item.list.map((item, i) => (
                       <div className='flex justify-start '>
                         <svg
@@ -109,11 +143,29 @@ const PricingComponent = () => {
                     ))}
                   </div>
                   {item.status ? (
-                    <button className='btn-sec mt-auto w-full'>Choose</button>
+                    <>
+                      {!user ? (
+                        <Link href='/signup' className='btn-sec mt-auto '>
+                          Choose
+                        </Link>
+                      ) : (
+                        <a href={item.route} className='btn-sec mt-auto '>
+                          Choose
+                        </a>
+                      )}
+                    </>
                   ) : (
-                    <button className='btn-primary mt-auto w-full'>
-                      Choose
-                    </button>
+                    <>
+                      {!user ? (
+                        <Link href='/signup' className='btn-primary mt-auto '>
+                          Choose
+                        </Link>
+                      ) : (
+                        <a href={item.route} className='btn-primary mt-auto '>
+                          Choose
+                        </a>
+                      )}
+                    </>
                   )}
                 </div>
               )}
@@ -140,9 +192,10 @@ const PricingData = [
       ' Timesheet of staff ',
       ' Limited to 10 users',
     ],
-    price: '$1000 per year ',
+    price: '$20 per week ',
     setupfee: '$1000 setup fee ',
     status: true,
+    route: 'https://smitiv.recurly.com/subscribe/startup',
   },
   {
     title: 'SME',
@@ -156,9 +209,10 @@ const PricingData = [
       ' Timesheet of staff ',
       ' Limited to 30 users',
     ],
-    price: '$3000 per year ',
+    price: '$60 per week ',
     setupfee: '$1000 setup fee ',
     status: false,
+    route: 'https://smitiv.recurly.com/subscribe/sme',
   },
   {
     title: 'Large SME',
@@ -172,8 +226,9 @@ const PricingData = [
       ' Timesheet of staff ',
       ' Limited to 50 users',
     ],
-    price: '$5000 per year ',
+    price: '$100 per week ',
     status: true,
+    route: 'https://smitiv.recurly.com/subscribe/large-sme',
   },
   {
     title: 'Corporation',
@@ -187,8 +242,9 @@ const PricingData = [
       ' Timesheet of staff ',
       ' Limited to 100 users',
     ],
-    price: '$10,000 per year ',
+    price: '$200 per week ',
     status: true,
+    route: 'https://smitiv.recurly.com/subscribe/corporation',
   },
   {
     title: 'Large Corporation',
@@ -202,8 +258,9 @@ const PricingData = [
       ' Timesheet of staff ',
       ' Limited to 300 users',
     ],
-    price: '$20,000 per year ',
+    price: '$400 per week ',
     status: false,
+    route: 'https://smitiv.recurly.com/subscribe/large-corporation',
   },
   {
     title: 'Unicorn',
@@ -217,7 +274,8 @@ const PricingData = [
       ' Timesheet of staff ',
       ' Limited to 1000 users',
     ],
-    price: '$25,000 per year ',
+    price: '$500 per week ',
     status: true,
+    route: 'https://smitiv.recurly.com/subscribe/unicorn',
   },
 ];

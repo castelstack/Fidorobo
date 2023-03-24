@@ -4,10 +4,10 @@
 
 @layer components {
   .btn-primary {
-    @apply py-[10px] px-[50px] bg-white text-tag-brand font-semibold rounded-md shadow-md  focus:outline-none focus:ring-2 focus:ring-tag-brand focus:ring-opacity-75 text-base;
+    @apply py-[10px] px-[50px] bg-white hover:bg-white hover:opacity-90 transition-all duration-300 ease-in text-tag-brand font-semibold rounded-md shadow-md  focus:outline-none focus:ring-2  focus:ring-opacity-75 text-base  flex justify-center;
   }
   .btn-sec {
-    @apply py-[10px] px-[50px] text-white bg-tag-brand font-semibold rounded-md shadow-md hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-tag-brand focus:ring-opacity-75 text-base;
+    @apply py-[10px] px-[50px] text-white bg-tag-brand hover:bg-tag-brand transition-all duration-300 ease-in font-semibold rounded-md shadow-md hover:bg-opacity-75 focus:outline-none focus:ring-2  focus:ring-opacity-75 text-base flex justify-center;
   }
 
   .header-text {
@@ -15,6 +15,15 @@
   }
   .banner-text {
     @apply md:!leading-[4rem] !leading-[2.8rem] text-5xl max-lg:text-4xl max-md:text-2xl font-bold text-black
+  }
+  .input-style {
+    @apply p-2 border border-gray-400 rounded-md outline-none focus:border-none focus:ring-2 bg-transparent text-base text-gray-800 focus:ring-purple-500
+  }
+  .label {
+    @apply text-[13px] text-gray-900 leading-3 capitalize font-medium
+  }
+  .error {
+    @apply text-xs text-red-500 mt-1
   }
   p {
     @apply text-base max-md:text-sm font-normal 
@@ -122,7 +131,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.button:hover {
+background-color: #fff !important;
+}
 
+button:disabled{
+  opacity: 0.5;
+}
 
 .wrapper{
   max-width: 1200px;
@@ -136,7 +151,10 @@ body {
 }
 
 .dropdown-right .dropdown-content {
-  left: -500% !important;
+  left: -800% !important;
+}
+.dropdown-left .dropdown-content {
+  left: -100% !important;
 }
 
 .hero{
@@ -150,7 +168,16 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+@media screen and (max-width: 1100px) {
+  .dropdown-right .dropdown-content {
+    left: -500% !important;
+  }
+}
+@media screen and (max-width: 879px) {
+  .dropdown-right .dropdown-content {
+    left: -300% !important;
+  }
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -9,7 +9,7 @@ const DownloadComponent = () => {
           <h2 className='header-text text-center'>
             Get started with our mobile app
           </h2>
-          <p className='text-base text-center max-md:w-[85%] w-[50%]'>
+          <p className='text-[18px] max-md:text-base text-center max-md:w-[85%] w-[50%]'>
             With a suite of features and functionalities, geared towards making
             it easy for you
           </p>

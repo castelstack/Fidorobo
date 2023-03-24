@@ -19,12 +19,21 @@ export default function Home() {
 
       <main className='bg-white h-full'>
         <Header />
-        <BannerComponent/>
-        <AboutComponent />
+        <BannerComponent
+          heading={'Explore your world with field robo'}
+          description={`Field Robo has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`}
+        />
+        <AboutComponent 
+          heading={'About Field Robo'}
+          description={`All-In-One Platform. Total Visibility. Our field service management
+          software is feature rich and supports a wide range of businesses who
+          perform service jobs, project and maintenance management.`}
+      
+        />
         <ClientComponent />
         <PricingComponent />
         <DownloadComponent />
-        <Footer/>
+        <Footer />
       </main>
     </>
   );

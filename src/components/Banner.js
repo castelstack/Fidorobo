@@ -1,25 +1,27 @@
 import aboutImg from '@/assets/heroimage.png';
-import herobg from '@/assets/bg-hero.png';
 import Image from 'next/image';
+import { useAtomValue } from 'jotai';
+import { currentUser } from '@/store';
+import Link from 'next/link';
 
-const BannerComponent = () => {
+const BannerComponent = ({heading, description, ...props}) => {
+  const user = useAtomValue(currentUser)
   return (
     <section className='bg-tag-brandLight'>
 
     <main className='hero md:h-[90vh] h-full  grid place-content-center'>
       <div className='wrapper px-4 grid grid-cols-2 max-md:grid-cols-1 max-md:justify-items-center gap-4 items-center justify-between pt-20 pb-40'>
-        <div className='flex flex-col  text-black items-start gap-6'>
+        <div className='flex flex-col  description-black items-start gap-6'>
+          <span className='text-xs font-extrabold uppercase text-white'>{props.type}</span>
           <h2 className='banner-text text-5xl max-lg:text-4xl max-md:text-4xl  text-white'>
-            Explore your world with field robo
+            {heading}
           </h2>
-          <p className='text-base  text-white max-md:w-[95%]'>
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
+          <p className='text-2xl max-md:text-base font-extralight  text-white max-md:w-[95%]'>
+           {description}
           </p>
-          <button type='button' className='btn-primary'>
+          <Link href={user? '/pricing' : '/signup'} type='button' className='btn-primary'>
             Get started
-          </button>
+          </Link>
         </div>
 
         <Image
