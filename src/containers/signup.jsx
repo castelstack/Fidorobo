@@ -1,13 +1,16 @@
 import axios from 'axios';
 import { Formik } from 'formik';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useToasts } from 'react-toast-notifications';
 import * as Yup from 'yup';
+import { BASE_URL } from './signinForm';
 
 export const SignupForm = () => {
   const { addToast } = useToasts();
-  const [loading, setLoading] = useState(false)
+  const route = useRouter();
+  const [loading, setLoading] = useState(false);
   const industries = [
     {
       title: 'Aircon servicing',
@@ -43,7 +46,7 @@ export const SignupForm = () => {
       onSubmit={async (values, { resetForm }) => {
         setLoading(true);
         axios
-          .post('http://52.221.226.148:5001/api/v1/company', {
+          .post(`${BASE_URL}/company`, {
             ...values,
           })
           .then(function () {
@@ -51,10 +54,11 @@ export const SignupForm = () => {
               appearance: 'success',
               autoDismiss: true,
             });
-            resetForm()
+            route.push('/signin');
+            resetForm();
           })
           .catch(function (error) {
-            console.log(error)
+            console.log(error);
             addToast(error.response.data.message, {
               appearance: 'error',
               autoDismiss: true,
@@ -206,8 +210,12 @@ export const SignupForm = () => {
             )}
             Create
           </button>
-          <p className='text-base text-gray-900 mt-2'>Already have an account? <Link className='text-purple-800' href='/signin'>sign in</Link></p>
-        
+          <p className='text-base text-gray-900 mt-2'>
+            Already have an account?{' '}
+            <Link className='text-purple-800' href='/signin'>
+              sign in
+            </Link>
+          </p>
         </form>
       )}
     </Formik>

@@ -1,20 +1,23 @@
 import { currentUser } from '@/store';
 import axios from 'axios';
 import { Formik } from 'formik';
-import { useAtom, useAtomValue, useSetAtom } from 'jotai';
+import { useAtomValue, useSetAtom } from 'jotai';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useToasts } from 'react-toast-notifications';
 import * as Yup from 'yup';
 
+export const BASE_URL = 'https://api.fieldrobo.io/api/v1';
+// export const BASE_URL = 'http://52.221.226.148:5001/api/v1';
+
 export const SigninForm = () => {
   const { addToast } = useToasts();
   const [loading, setLoading] = useState(false);
-  const setUser = useSetAtom(currentUser)
-  const user = useAtomValue(currentUser)
-const route = useRouter()
-  console.log(user, 'user1')
+  const setUser = useSetAtom(currentUser);
+  const user = useAtomValue(currentUser);
+  const route = useRouter();
+  // console.log(user, 'user1');
 
   return (
     <Formik
@@ -29,7 +32,7 @@ const route = useRouter()
       onSubmit={async (values, { resetForm }) => {
         setLoading(true);
         axios
-          .post('http://52.221.226.148:5001/api/v1/admin/login', {
+          .post(`${BASE_URL}/admin/login`, {
             ...values,
           })
           .then(function (res) {
@@ -38,8 +41,8 @@ const route = useRouter()
               autoDismiss: true,
             });
             console.log(res);
-            setUser({...res.data.admin})
-            route.push('/pricing')
+            setUser({ ...res.data.admin });
+            route.push('/pricing');
             resetForm();
           })
           .catch(function (error) {
@@ -114,14 +117,29 @@ const route = useRouter()
                 />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-            </svg>
-            
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='w-6 h-6'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75'
+                />
+              </svg>
             )}
             Sign in
           </button>
-          <p className='text-base text-gray-900 mt-2'>Don't have an account? <Link className='text-purple-800' href='/signup'>sign up</Link></p>
+          <p className='text-base text-gray-900 mt-2'>
+            Don't have an account?{' '}
+            <Link className='text-purple-800' href='/signup'>
+              sign up
+            </Link>
+          </p>
         </form>
       )}
     </Formik>

@@ -5,18 +5,118 @@ import Link from 'next/link';
 const PricingComponent = () => {
   const user = useAtomValue(currentUser);
 
-  console.log(user, 'user');
+  const PricingData = [
+    {
+      title: 'Startup',
+      list: [
+        'Job scheduling',
+        'contract management ',
+        'invoice management ',
+        'quotation management ',
+        'live tracking of staff ',
+        'customer sign on acceptance ',
+        ' Timesheet of staff ',
+        ' Limited to 10 users',
+      ],
+      price: '$20 per week ',
+      setupfee: '$1000 setup fee ',
+      status: true,
+      route: `https://smitiv.recurly.com/subscribe/startup?email=${user?.email}`
+    },
+    {
+      title: 'SME',
+      list: [
+        'Job scheduling',
+        'contract management ',
+        'invoice management ',
+        'quotation management ',
+        'live tracking of staff ',
+        'customer sign on acceptance ',
+        ' Timesheet of staff ',
+        ' Limited to 30 users',
+      ],
+      price: '$60 per week ',
+      setupfee: '$1000 setup fee ',
+      status: false,
+      route: `https://smitiv.recurly.com/subscribe/sme?email=${user?.email}`
+    },
+    {
+      title: 'Large SME',
+      list: [
+        'Job scheduling',
+        'contract management ',
+        'invoice management ',
+        'quotation management ',
+        'live tracking of staff ',
+        'customer sign on acceptance ',
+        ' Timesheet of staff ',
+        ' Limited to 50 users',
+      ],
+      price: '$100 per week ',
+      status: true,
+      route: `https://smitiv.recurly.com/subscribe/large-sme?email=${user?.email}`
+    },
+    {
+      title: 'Corporation',
+      list: [
+        'Job scheduling',
+        'contract management ',
+        'invoice management ',
+        'quotation management ',
+        'live tracking of staff ',
+        'customer sign on acceptance ',
+        ' Timesheet of staff ',
+        ' Limited to 100 users',
+      ],
+      price: '$200 per week ',
+      status: true,
+      route: `https://smitiv.recurly.com/subscribe/corporation?email=${user?.email}`
+    },
+    {
+      title: 'Large Corporation',
+      list: [
+        'Job scheduling',
+        'contract management ',
+        'invoice management ',
+        'quotation management ',
+        'live tracking of staff ',
+        'customer sign on acceptance ',
+        ' Timesheet of staff ',
+        ' Limited to 300 users',
+      ],
+      price: '$400 per week ',
+      status: false,
+      route: `https://smitiv.recurly.com/subscribe/large-corporation?email=${user?.email}`
+    },
+    {
+      title: 'Unicorn',
+      list: [
+        'Job scheduling',
+        'contract management ',
+        'invoice management ',
+        'quotation management ',
+        'live tracking of staff ',
+        'customer sign on acceptance ',
+        ' Timesheet of staff ',
+        ' Limited to 1000 users',
+      ],
+      price: '$500 per week ',
+      status: true,
+      route: `https://smitiv.recurly.com/subscribe/unicorn?email=${user?.email}`
+    },
+  ];
+  
   return (
     <section id='pricing' className=' bg-tag-brandLight py-32'>
       <main className='wrapper px-4'>
-        <div className='flex flex-col  text-black gap-4'>
-          <h2 className='header-text '>Field Robo pricing</h2>
-          <p className='text-[18px] max-md:text-base  max-md:w-[95%] w-[50%]'>
+        <div className='flex flex-col items-center w-full text-black gap-4'>
+          <h2 className='header-text text-center'>Field Robo pricing</h2>
+          <p className='text-[18px] max-md:text-base text-center max-md:w-[95%] w-[50%]'>
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took a galley
           </p>
         </div>
-        <div className='grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-8 mt-12'>
+        <div className='grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-8 mt-20'>
           {PricingData.map((item, i) => (
             <>
               {item.status ? (
@@ -178,104 +278,3 @@ const PricingComponent = () => {
 };
 
 export default PricingComponent;
-
-const PricingData = [
-  {
-    title: 'Startup',
-    list: [
-      'Job scheduling',
-      'contract management ',
-      'invoice management ',
-      'quotation management ',
-      'live tracking of staff ',
-      'customer sign on acceptance ',
-      ' Timesheet of staff ',
-      ' Limited to 10 users',
-    ],
-    price: '$20 per week ',
-    setupfee: '$1000 setup fee ',
-    status: true,
-    route: 'https://smitiv.recurly.com/subscribe/startup',
-  },
-  {
-    title: 'SME',
-    list: [
-      'Job scheduling',
-      'contract management ',
-      'invoice management ',
-      'quotation management ',
-      'live tracking of staff ',
-      'customer sign on acceptance ',
-      ' Timesheet of staff ',
-      ' Limited to 30 users',
-    ],
-    price: '$60 per week ',
-    setupfee: '$1000 setup fee ',
-    status: false,
-    route: 'https://smitiv.recurly.com/subscribe/sme',
-  },
-  {
-    title: 'Large SME',
-    list: [
-      'Job scheduling',
-      'contract management ',
-      'invoice management ',
-      'quotation management ',
-      'live tracking of staff ',
-      'customer sign on acceptance ',
-      ' Timesheet of staff ',
-      ' Limited to 50 users',
-    ],
-    price: '$100 per week ',
-    status: true,
-    route: 'https://smitiv.recurly.com/subscribe/large-sme',
-  },
-  {
-    title: 'Corporation',
-    list: [
-      'Job scheduling',
-      'contract management ',
-      'invoice management ',
-      'quotation management ',
-      'live tracking of staff ',
-      'customer sign on acceptance ',
-      ' Timesheet of staff ',
-      ' Limited to 100 users',
-    ],
-    price: '$200 per week ',
-    status: true,
-    route: 'https://smitiv.recurly.com/subscribe/corporation',
-  },
-  {
-    title: 'Large Corporation',
-    list: [
-      'Job scheduling',
-      'contract management ',
-      'invoice management ',
-      'quotation management ',
-      'live tracking of staff ',
-      'customer sign on acceptance ',
-      ' Timesheet of staff ',
-      ' Limited to 300 users',
-    ],
-    price: '$400 per week ',
-    status: false,
-    route: 'https://smitiv.recurly.com/subscribe/large-corporation',
-  },
-  {
-    title: 'Unicorn',
-    list: [
-      'Job scheduling',
-      'contract management ',
-      'invoice management ',
-      'quotation management ',
-      'live tracking of staff ',
-      'customer sign on acceptance ',
-      ' Timesheet of staff ',
-      ' Limited to 1000 users',
-    ],
-    price: '$500 per week ',
-    status: true,
-    route: 'https://smitiv.recurly.com/subscribe/unicorn',
-  },
-];
