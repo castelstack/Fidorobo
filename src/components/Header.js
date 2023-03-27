@@ -3,7 +3,7 @@ import { useAtomValue } from 'jotai';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import Industries, { Features, IndustriesMobile } from './Industries';
+import Industries, { Features, FeaturesMobile, IndustriesMobile } from './Industries';
 import { Logo } from './Logo';
 
 const Header = () => {
@@ -100,18 +100,34 @@ const Header = () => {
           )}
         </button>
       </div>
-      {open && <MobileHeader setOpen={setOpen} open={open} />}
+   {open&& <MobileHeader setOpen={setOpen} open={open} user={user} />}
     </header>
   );
 };
 
 export default Header;
 
-const MobileHeader = ({ setOpen, open }) => {
+const MobileHeader = ({ setOpen, open, user }) => {
   const [openInd, setOpenInd] = useState(false);
+  const [openFeatures, setOpenFeatures] = useState(false);
+  // useEffect(() => {
+  //   // Prevent page scrolling
+  //   function preventScroll(e) {
+  //     e.preventDefault();
+  //   }
+
+  //   // Add the event listener when the component mounts
+  //   document.addEventListener('scroll', preventScroll, { passive: false });
+
+  //   // Remove the event listener when the component unmounts
+  //   return () => {
+  //     document.removeEventListener('scroll', preventScroll);
+  //   };
+  // }, []);
+
   return (
-    <div className='fixed top-0 w-full bg-white/40 h-full transition-all ease-in duration-300'>
-      <div className=' bg-tag-brand p-4'>
+    <div className={`fixed top-0 w-full bg-white/40 h-full ${open ? 'transUp' : 'hidden'}`}>
+      <div className={`bg-tag-brand p-4 ${open ? 'transDown' : 'hidden'}`}>
         <button
           type='button'
           className='flex md:hidden ml-auto'
@@ -163,13 +179,20 @@ const MobileHeader = ({ setOpen, open }) => {
               </div>
             </div>
           )}
+          <p
+            className='text-white text-base'
+            onClick={() => setOpenFeatures(!openFeatures)}
+          >
+            Features
+          </p>
+          {openFeatures && (
+            <div className=' w-full bg-transparent'>
+              <div className='border-t border-white p-2'>
+                <FeaturesMobile />
+              </div>
+            </div>
+          )}
 
-          <Link href='/' className='capitalize'>
-            Pricing
-          </Link>
-          <Link href='/' className='capitalize'>
-            Pricing
-          </Link>
           {!user ? (
             <Link href={'/signup'} className='btn-primary'>
               Sign up
