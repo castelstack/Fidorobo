@@ -17,7 +17,7 @@ export default function Industries() {
         .replace(/,|&/g, '')
         .split(' ')
         .join('-')
-        .toLocaleLowerCase() === query.id
+        .toLocaleLowerCase().replace(/--/g, "-") === query.id
   )[0]?.title;
   const description = linksInfo.filter(
     (link) =>
@@ -25,7 +25,7 @@ export default function Industries() {
         .replace(/,|&/g, '')
         .split(' ')
         .join('-')
-        .toLocaleLowerCase() === query.id
+        .toLocaleLowerCase().replace(/--/g, "-") === query.id
   )[0]?.description;
 
   return (

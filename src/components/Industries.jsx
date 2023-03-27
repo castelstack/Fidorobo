@@ -27,7 +27,7 @@ const Industries = () => {
             href={`/industry/${link.route.replace(/,|&/g, '')
             .split(' ')
             .join('-')
-            .toLocaleLowerCase()}`}
+            .toLocaleLowerCase().replace(/--/g, "-")}`}
             key={i}
             className='text-gray-900 font-thin  cursor-pointer hover:text-tag-brand border-b border-gray-200 pb-2'
           >
@@ -105,7 +105,7 @@ export const Features = () => {
                 {link.title}
               </h3>
               {link.subs.map((sub, i) => (
-                <Link href={`/feature/${sub.replace(/,|&/g, "").split(' ').join('-').toLocaleLowerCase()}`} key={i}  className='font-thin inline word-break text-gray-900 cursor-pointer hover:text-tag-brand'>
+                <Link href={`/feature/${sub.replace(/,|&/g, "").split(' ').join('-').toLocaleLowerCase().replace(/--/g, "-")}`} key={i}  className='font-thin inline word-break text-gray-900 cursor-pointer hover:text-tag-brand'>
                {sub}
                 </Link>
               ))}
@@ -227,7 +227,7 @@ export const IndustriesMobile = () => {
             href={`/industry/${link.route.replace(/,|&/g, '')
             .split(' ')
             .join('-')
-            .toLocaleLowerCase()}`}
+            .toLocaleLowerCase().replace(/--/g, "-")}`}
             key={i}
             className='text-gray-200 font-thin  cursor-pointer   pb-2'
           >
@@ -299,7 +299,7 @@ export const FeaturesMobile = () => {
                 {link.title}
               </h3>
               {link.subs.map((sub, i) => (
-                <Link href={`/feature/${sub.replace(/,|&/g, "").split(' ').join('-').toLocaleLowerCase()}`} key={i}  className='font-thin inline word-break text-gray-200 cursor-pointer'>
+                <Link href={`/feature/${sub.replace(/,|&/g, "").split(' ').join('-').toLocaleLowerCase().replace(/--/g, "-")}`} key={i}  className='font-thin inline word-break text-gray-200 cursor-pointer'>
                {sub}
                 </Link>
               ))}

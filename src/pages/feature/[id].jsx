@@ -16,8 +16,8 @@ export default function Features() {
   console.log(query)
   
 
-  const heading = linksInfo.filter((link)=> link.title.replace(/,|&/g, "").split(' ').join('-').toLocaleLowerCase()===query.id)[0]?.title
-  const description = linksInfo.filter((link)=> link.title.replace(/,|&/g, "").split(' ').join('-').toLocaleLowerCase()===query.id)[0]?.description
+  const heading = linksInfo.filter((link)=> link.title.replace(/,|&/g, "").split(' ').join('-').toLocaleLowerCase().replace(/--/g, "-")===query.id)[0]?.title
+  const description = linksInfo.filter((link)=> link.title.replace(/,|&/g, "").split(' ').join('-').toLocaleLowerCase().replace(/--/g, "-")===query.id)[0]?.description
 
   return (
     <>
