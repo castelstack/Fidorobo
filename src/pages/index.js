@@ -20,15 +20,14 @@ export default function Home() {
       <main className='bg-white h-full'>
         <Header />
         <BannerComponent
-          heading={'Explore your world with field robo'}
-          description={`Field Robo has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`}
+          heading={'Explore your world with Field Robo'}
+          description={`Optimize your business flow, Empower your team to excel and Leave lasting impressions on your customers`}
         />
-        <AboutComponent 
-          heading={'About Field Robo'}
-          description={`All-In-One Platform. Total Visibility. Our field service management
-          software is feature rich and supports a wide range of businesses who
-          perform service jobs, project and maintenance management.`}
-      
+        <AboutComponent
+          heading={`All-In-One Platform.
+          Total Visibility.`}
+          description={`Real-time visibility, intelligent features and all the information for your team in one place. Field Robo is your all-in-one platform for job management, scheduling, planned maintenance, invoicing, quoting, automated communications, reporting and more.`}
+          text={`Our field service management software is feature rich and supports a wide range of businesses who perform service jobs, project and maintenance management.`}
         />
         <ClientComponent />
         <PricingComponent />

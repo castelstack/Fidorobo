@@ -9,7 +9,7 @@ const DownloadComponent = () => {
           <h2 className='header-text text-center'>
             Get started with our mobile app
           </h2>
-          <p className='text-[18px] max-md:text-base text-center max-md:w-[85%] w-[50%]'>
+          <p className='text-[18px] max-md:text-base text-center max-md:w-[95%] w-[50%]'>
             With a suite of features and functionalities, geared towards making
             it easy for you
           </p>
@@ -19,10 +19,12 @@ const DownloadComponent = () => {
           <div className='grid grid-cols-2 max-md:grid-cols-1 max-md:justify-items-center max-md:justify-center gap-4 items-center justify-between'>
             <div className='flex flex-col max-md:items-center text-black items-start gap-6'>
               <h2 className='header-text !text-xl md:!text-2xl max-md:text-center'>
-                Download field robo mobile app to get started
+                Download Field Robo mobile app to get started
               </h2>
-              <p className='text-base max-md:text-center max-md:w-[85%]'>
-                A better way to say “It’s on me”
+              <p className='text-base max-md:text-center max-md:w-[95%]'>
+                Get our field service management software for good experience
+                how you can manage your business with ease & impress your
+                customers.
               </p>
               <div className='flex flex-wrap max-md:px-auto max-md:w-full max-md:justify-center gap-6'>
                 <button

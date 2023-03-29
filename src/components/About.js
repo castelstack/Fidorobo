@@ -1,7 +1,7 @@
 import aboutImg from '@/assets/about.png';
 import Image from 'next/image';
 
-const AboutComponent = ({heading, description}) => {
+const AboutComponent = ({heading, description,...props}) => {
   return (
     <section className='bg-tag-brandLight h-[90vh] py-32 grid place-content-center'>
       <div className='wrapper px-4 grid grid-cols-2 max-md:grid-cols-1  gap-4 items-center justify-between my-auto'>
@@ -9,6 +9,9 @@ const AboutComponent = ({heading, description}) => {
           <h2 className='header-text'>{heading}</h2>
           <p className='text-[18px] max-md:text-base  max-md:w-[95%] text-gray-800'>
             {description}
+          </p>
+          <p className='text-[18px] max-md:text-base  max-md:w-[95%] text-gray-800'>
+            {props.text}
           </p>
           <button type='button' className='btn-sec mt-4'>
             Get started

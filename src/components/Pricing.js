@@ -21,7 +21,7 @@ const PricingComponent = () => {
       price: '$20 per week ',
       setupfee: '$1000 setup fee ',
       status: true,
-      route: `https://smitiv.recurly.com/subscribe/startup?email=${user?.email}`
+      route: `https://smitiv.recurly.com/subscribe/startup?email=${user?.email}`,
     },
     {
       title: 'SME',
@@ -37,8 +37,8 @@ const PricingComponent = () => {
       ],
       price: '$60 per week ',
       setupfee: '$1000 setup fee ',
-      status: false,
-      route: `https://smitiv.recurly.com/subscribe/sme?email=${user?.email}`
+      status: true,
+      route: `https://smitiv.recurly.com/subscribe/sme?email=${user?.email}`,
     },
     {
       title: 'Large SME',
@@ -54,7 +54,7 @@ const PricingComponent = () => {
       ],
       price: '$100 per week ',
       status: true,
-      route: `https://smitiv.recurly.com/subscribe/large-sme?email=${user?.email}`
+      route: `https://smitiv.recurly.com/subscribe/large-sme?email=${user?.email}`,
     },
     {
       title: 'Corporation',
@@ -70,7 +70,7 @@ const PricingComponent = () => {
       ],
       price: '$200 per week ',
       status: true,
-      route: `https://smitiv.recurly.com/subscribe/corporation?email=${user?.email}`
+      route: `https://smitiv.recurly.com/subscribe/corporation?email=${user?.email}`,
     },
     {
       title: 'Large Corporation',
@@ -85,8 +85,8 @@ const PricingComponent = () => {
         ' Limited to 300 users',
       ],
       price: '$400 per week ',
-      status: false,
-      route: `https://smitiv.recurly.com/subscribe/large-corporation?email=${user?.email}`
+      status: true,
+      route: `https://smitiv.recurly.com/subscribe/large-corporation?email=${user?.email}`,
     },
     {
       title: 'Unicorn',
@@ -102,18 +102,18 @@ const PricingComponent = () => {
       ],
       price: '$500 per week ',
       status: true,
-      route: `https://smitiv.recurly.com/subscribe/unicorn?email=${user?.email}`
+      route: `https://smitiv.recurly.com/subscribe/unicorn?email=${user?.email}`,
     },
   ];
-  
+
   return (
-    <section id='pricing' className=' bg-tag-brandLight py-32'>
+    <section id='pricing' className=' bg-gray-200/40  py-32'>
       <main className='wrapper px-4'>
         <div className='flex flex-col items-center w-full text-black gap-4'>
-          <h2 className='header-text text-center'>Field Robo pricing</h2>
+          <h2 className='header-text text-center '> Simple, transparent pricing.</h2>
           <p className='text-[18px] max-md:text-base text-center max-md:w-[95%] w-[50%]'>
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took a galley
+           
+         
           </p>
         </div>
         <div className='grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-8 mt-20'>

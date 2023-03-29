@@ -164,6 +164,13 @@ button:disabled{
   background-position: bottom;
   background-size: 100% 100%;
 }
+.started{
+  background-image: url('/start.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-attachment: fixed;
+}
 
 a {
   color: inherit;

@@ -1,53 +1,85 @@
-import Link from "next/link";
-
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className=' wrapper px-4 flex flex-col gap-4  py-12 border-t  border-white/10'>
       <div className='flex flex-col md:flex-row justify-between md:gap-4 gap-6 '>
         <div className='flex flex-col items-start gap-4 '>
-         
-          <h1 className='text-xl font-bold text-black'>Fieldrobo</h1>
-          <p className="mb-3 text-black w-[80%]">Lorem Ipsum has been the industry's standard dummy</p>
+          <h1 className='text-xl font-bold text-black'>Field Robo</h1>
+          {/* <p className="mb-3 text-black w-[80%]">Lorem Ipsum has been the industry's standard dummy</p> */}
           <p className='font-light max-md:hidden !text-center !text-sm !text-gray-600'>
-          @fieldrobo {new Date().getFullYear()} All right reserved.
-        </p>
+            @fieldrobo {new Date().getFullYear()} All right reserved.
+          </p>
         </div>
         {/* access */}
         <div className='flex flex-col'>
           <h1 className='text-base text-black font-bold mb-2'>Products</h1>
-          <Link href='/privacy-and-policy' className='capitalize mb-1 text-sm font-light text-black'>
-          about us
+          <Link
+            href='/signin'
+            className='capitalize mb-1 text-sm font-light text-black'
+          >
+           Sign in
           </Link>
-          <Link href='/privacy-and-policy' className='capitalize mb-1 text-sm font-light text-black'>
-          client portal
+          <Link
+            href='/pricing'
+            className='capitalize mb-1 text-sm font-light text-black'
+          >
+            Pricing
           </Link>
-          <Link href='/privacy-and-policy' className='capitalize mb-1 text-sm font-light text-black'>
-          help center
+          {/* <Link
+            href='/privacy-and-policy'
+            className='capitalize mb-1 text-sm font-light text-black'
+          >
+            help center
           </Link>
-          <Link href='/privacy-and-policy' className='capitalize mb-1 text-sm font-light text-black'>
-          customer suport
-          </Link>
+          <Link
+            href='/privacy-and-policy'
+            className='capitalize mb-1 text-sm font-light text-black'
+          >
+            customer suport
+          </Link> */}
         </div>
         {/* contacts */}
         <div className='flex flex-col'>
           <h1 className='text-base text-black font-bold mb-2'>Resources</h1>
-          <a className='capitalize mb-1 text-sm font-light text-black' href='mailto:support@tournest.io'>
-          Case study
+         
+          <Link
+            href='/aircon-servicing'
+            className='capitalize mb-1 text-sm font-light text-black'
+          >
+            Servicing
+          </Link>
+          <Link
+            href='/pest-control'
+            className='capitalize mb-1 text-sm font-light text-black'
+          >
+            Pest control
+          </Link>
+          
+        </div>
+
+        <div className='flex flex-col'>
+          <h1 className='text-base text-black font-bold mb-2'>Company</h1>
+          <a
+            className='capitalize mb-1 text-sm font-light text-black'
+            
+          >
+            Contact
           </a>
-          <a className='capitalize mb-1 text-sm font-light text-black' href='mailto:support@tournest.io'>
-          trade talk
-          </a>
-          <a className='capitalize mb-1 text-sm font-light text-black' href='mailto:support@tournest.io'>
-          field service glossary
+          <a
+            className='capitalize mb-1 text-sm font-light text-black'
+            
+          >
+            Terms & Privacy Policy
           </a>
         
         </div>
 
+
         {/* socials */}
-        <div className='flex flex-col'>
+        <div className='flex flex-col hidden'>
           <h1 className='text-base text-black font-bold mb-2'>Socials</h1>
-          <div className={"flex gap-6 "}>
+          <div className={'flex gap-6 '}>
             <a
               href='https://twitter.com/TOURNEST0?t=UhQzu1med1uYThkyQNt22Q&s=09'
               target='_blank'
@@ -81,7 +113,7 @@ const Footer = () => {
             </a>
 
             <a
-              href='https://vm.tiktok.com/ZMNa73QoA/'
+              href='/'
               target='_blank'
               rel='noreferrer'
             >
@@ -99,7 +131,7 @@ const Footer = () => {
             </a>
 
             <a
-              href='https://discord.gg/74HFX3PC'
+              href='/'
               target='_blank'
               rel='noreferrer'
             >
@@ -117,7 +149,7 @@ const Footer = () => {
             </a>
 
             <a
-              href='https://instagram.com/tournest.community'
+              href='/'
               target='_blank'
               rel='noreferrer'
             >
@@ -135,7 +167,7 @@ const Footer = () => {
             </a>
 
             <a
-              href='https://t.me/+2emunoC4F_85YzJk'
+              href='/'
               target='_blank'
               rel='noreferrer'
             >
@@ -155,8 +187,8 @@ const Footer = () => {
         </div>
       </div>
       <p className='font-light max-md:inline hidden !text-center !text-sm !text-gray-600 mt-6'>
-          @fieldrobo {new Date().getFullYear()} All right reserved.
-        </p>
+        @fieldrobo {new Date().getFullYear()} All right reserved.
+      </p>
       {/* <div className='flex justify-center w-full py-6 border-t  border-white/10'>
         <a className='text-sm font-light text-black !text-center !text-sm !text-gray-600'>
           @fieldrobo {new Date().getFullYear()} All right reserved.

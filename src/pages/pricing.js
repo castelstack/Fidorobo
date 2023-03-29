@@ -2,6 +2,7 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import PricingComponent from '@/components/Pricing';
+import Started from '@/components/Started';
 import Head from 'next/head';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Header />
       
         <PricingComponent />
+        <Started/>
         <Footer />
       </main>
     </>

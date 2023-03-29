@@ -65,7 +65,7 @@ We try to make sure Dashboard works well in the latest versions of all major bro
 
 ## Reporting Issues
 
-Fieldrobo's free items are limited to community support on GitHub.
+Field Robo's free items are limited to community support on GitHub.
 
 The issue list is reserved exclusively for bug reports and feature requests. That means we do not accept usage questions. If you open an issue that does not conform to the requirements, it will be closed.
 

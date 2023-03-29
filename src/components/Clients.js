@@ -17,6 +17,12 @@ const ClientComponent = () => {
             your customer’s a 24/7 self serve portal & a real time view on their
             jobs.
           </p>
+          <p className='text-[18px] max-md:text-base max-md:w-[95%] font-normal text-gray-800'>
+            Successfully run your business with a single software platform. With
+            features for office and field, Field Robo's cloud-based Job and
+            Field Service Management software gives you everything you need to
+            manage operations and grow your business.
+          </p>
           <button type='button' className='btn-sec mt-4'>
             Get started
           </button>
