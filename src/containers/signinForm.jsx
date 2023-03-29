@@ -40,9 +40,12 @@ export const SigninForm = () => {
               appearance: 'success',
               autoDismiss: true,
             });
-            console.log(res);
+            res.data.admin.company.paidPlan?
+            route.push('https://admin.fieldrobo.io/')
+            :   route.push('/pricing');
+            // console.log(res.data.admin.company.paidPlan, 'res');
             setUser({ ...res.data.admin });
-            route.push('/pricing');
+        
             resetForm();
           })
           .catch(function (error) {

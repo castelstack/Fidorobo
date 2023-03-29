@@ -20,9 +20,9 @@ const Started = () => {
               Get started
             </Link>
           ) : (
-            <a href={item.route} className='btn-primary mt-auto '>
-              Choose
-            </a>
+            <Link href='/pricing' className='btn-primary mt-auto'>
+            Upgrade
+          </Link>
           )}
         </>
       </div>
