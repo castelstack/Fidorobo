@@ -40,8 +40,7 @@ export default function Signup() {
           <div className='mx-auto flex flex-col items-center'>
             <Logo />
             <p className='text-center text-white w-[85%] text-base'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              excepturi tempora et
+            Optimize your business flow, Empower your team to excel and Leave lasting impressions on your customers
             </p>
           </div>
           <Image
